@@ -32,7 +32,7 @@ mongoose
     console.log("Connection with database successful...")
   })
 
-// making api webpages
+// making api routes
 
 const UdaanData = require("./udaanSchema");
 const { db } = require("./udaanSchema");
