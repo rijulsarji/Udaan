@@ -24,6 +24,7 @@ mongoose
 // making api webpages
 
 const UdaanData = require("./udaanSchema");
+const { db } = require("./udaanSchema");
 
 app.post(("/api/scholarships"), (req, res) => {
   const data = new UdaanData(req.body);
@@ -31,4 +32,10 @@ app.post(("/api/scholarships"), (req, res) => {
   data.save()
     .then(() => console.log("Details saved successfully"))
     .catch((err) => console.log("Error while saving data..."))
+})
+
+app.get(("/api/scholarships"), (req, res) => {
+  UdaanData.find()
+    .then(result => res.json(result))
+    .catch(err => console.log(err))
 })
