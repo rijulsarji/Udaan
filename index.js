@@ -25,7 +25,8 @@ app.use(function (req, res, next) {
 });
 
 // estabilishing connection with database
-const dbURI = process.env.DATABASE;
+const dbURI =
+  "mongodb+srv://udaanProject:Boat1200@udaan.onr8q.mongodb.net/Udaan?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI)
   .then(() => {
