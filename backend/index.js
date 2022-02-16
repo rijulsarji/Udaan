@@ -37,6 +37,10 @@ mongoose
 const UdaanData = require("./udaanSchema");
 const { db } = require("./udaanSchema");
 
+app.get("/", (req, res) => {
+  res.send("Navigate to api/scholarships");
+})
+
 app.post(("/api/scholarships"), (req, res) => {
   const data = new UdaanData(req.body);
   res.json(data);
