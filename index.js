@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 app.use(express.json())
-dotenv.config({ path: "./backend/config.env" })
+dotenv.config({ path: "./config.env" })
 
 // estabilishing server
 const port = process.env.PORT || 3000;
@@ -34,7 +34,8 @@ mongoose
 
 // making api routes
 
-const UdaanData = require("./backend/udaanSchema");
+const UdaanData = require("./udaanSchema");
+const { db } = require("./udaanSchema");
 
 app.get("/", (req, res) => {
   res.send("Navigate to api/scholarships");
