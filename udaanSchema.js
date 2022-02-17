@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const udaanSchema = new Schema({
+const scholarshipSchema = new Schema({
   title: {
     type: String
   },
@@ -22,5 +22,34 @@ const udaanSchema = new Schema({
   }
 })
 
-const UdaanData = mongoose.model("scholarships", udaanSchema);
-module.exports = UdaanData;
+const jobSchema = new Schema({
+  post: {
+    type: String,
+  },
+  govtOrg: {
+    type: String,
+  },
+  vacancies: {
+    type: String,
+  },
+  lastDate: {
+    type: String,
+  },
+  ageLimit: {
+    type: String,
+  },
+  payScale: {
+    type: String,
+  },
+  apply: {
+    type: String
+  },
+  website: {
+    type: String,
+  },
+});
+
+const Scholarships = mongoose.model("scholarships", scholarshipSchema);
+const Jobs = mongoose.model("jobs", jobSchema);
+
+module.exports = { Scholarships, Jobs };

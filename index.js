@@ -34,23 +34,42 @@ mongoose
 
 // making api routes
 
-const UdaanData = require("./udaanSchema");
-const { db } = require("./udaanSchema");
+const { Scholarships, Jobs } = require("./udaanSchema");
 
 app.get("/", (req, res) => {
   res.send("Navigate to api/scholarships");
 })
 
+// scholarships
 app.post(("/api/scholarships"), (req, res) => {
-  const data = new UdaanData(req.body);
+  const data = new Scholarships(req.body);
   res.json(data);
   data.save()
-    .then(() => console.log("Details saved successfully"))
-    .catch((err) => console.log("Error while saving data..."))
+    .then(() => console.log("Scholarship details saved successfully"))
+    .catch((err) => console.log("Error while saving scholarship data..."))
 })
 
 app.get(("/api/scholarships"), (req, res) => {
-  UdaanData.find()
+  Scholarships.find()
     .then(result => res.json(result))
+    .catch(err => console.log(err))
+})
+app.get("/api/scholarships/deleteAllRecords", (req, res) => {
+  Scholarships.deleteMany()
+    .then(console.log("All details have been deleted"))
+})
+
+// jobs
+app.post("/api/jobs", (req, res) => {
+  const data = new Jobs(req.body);
+  res.json(data);
+  data.save()
+    .then(() => console.log("Job details saved successfully"))
+    .catch(err => console.log("Error while saving job data..."))
+})
+
+app.get("/api/jobs", (req, res) => {
+  Jobs.find()
+    .then(result => res.send(result))
     .catch(err => console.log(err))
 })
