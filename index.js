@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const http = require("http")
 
 app.use(express.json())
 dotenv.config({ path: "./config.env" })
@@ -58,6 +59,10 @@ app.get(("/api/scholarships"), (req, res) => {
 //   Scholarships.deleteMany()
 //     .then(console.log("All details have been deleted"))
 // })
+app.get("/api/ok", (req, res) => {
+  const ip = req.ip;
+  console.log(ip);
+})
 
 // jobs
 app.post("/api/jobs", (req, res) => {
