@@ -54,10 +54,10 @@ app.get(("/api/scholarships"), (req, res) => {
     .then(result => res.json(result))
     .catch(err => console.log(err))
 })
-app.get("/api/scholarships/deleteAllRecords", (req, res) => {
-  Scholarships.deleteMany()
-    .then(console.log("All details have been deleted"))
-})
+// app.get("/api/scholarships/deleteAllRecords", (req, res) => {
+//   Scholarships.deleteMany()
+//     .then(console.log("All details have been deleted"))
+// })
 
 // jobs
 app.post("/api/jobs", (req, res) => {
