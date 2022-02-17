@@ -36,6 +36,7 @@ mongoose
 // making api routes
 
 const { Scholarships, Jobs } = require("./udaanSchema");
+const e = require("express");
 
 app.get("/", (req, res) => {
   res.send("Navigate to api/scholarships");
@@ -60,8 +61,11 @@ app.get(("/api/scholarships"), (req, res) => {
 //     .then(console.log("All details have been deleted"))
 // })
 app.get("/api/ok", (req, res) => {
-  const ip = req.ip;
-  res.send(ip);
+  const ip = req.socket.remoteAddress;
+  if(ip == '::1')
+    res.send("Private Session")
+  else
+    res.send("Non private session")
 })
 
 // jobs
