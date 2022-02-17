@@ -61,7 +61,7 @@ app.get(("/api/scholarships"), (req, res) => {
 // })
 app.get("/api/ok", (req, res) => {
   const ip = req.ip;
-  console.log(ip);
+  res.send(ip);
 })
 
 // jobs
