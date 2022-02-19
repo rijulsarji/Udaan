@@ -56,16 +56,14 @@ app.get(("/api/scholarships"), (req, res) => {
     .then(result => res.json(result))
     .catch(err => console.log(err))
 })
-// app.get("/api/scholarships/deleteAllRecords", (req, res) => {
-//   Scholarships.deleteMany()
-//     .then(console.log("All details have been deleted"))
-// })
-app.get("/api/ok", (req, res) => {
+
+app.get("/api/scholarships/deleteAllRecords", (req, res) => {
   const ip = req.socket.remoteAddress;
-  if(ip == '::1')
-    res.send("Private Session")
-  else
-    res.send("Non private session")
+  if (ip == "::1")
+    Scholarships.deleteMany().then(
+      console.log("All details have been deleted")
+    );
+  else res.send("Non private session");
 })
 
 // jobs
