@@ -3,6 +3,11 @@ import "../CSS/Routes/home.css";
 import { motion } from "framer-motion"
 import untitled from "../assets/Untitled.svg"
 import landingVideo from "../assets/landingVideo.mp4";
+import landingGif from "../assets/landingVideo.gif";
+
+// component imports
+import AboutUdaan from "../Components/aboutUdaan";
+import Aboutjobs from "../Components/aboutJobs";
 
 function Home() {
 
@@ -30,10 +35,17 @@ function Home() {
           transition={{duration: 1, delay: 0.5}}
         >
           {/* insert video here */}
-          <video src={landingVideo} autoPlay loop muted className="landingVideo" />
+          {/* <video src={landingVideo} autoPlay loop muted className="landingVideo" /> */}
+          <img src={landingGif} className="landingVideo" />
         </motion.div>
       </div>
       {/* sub body ends */}
+
+      {/* about udaan */}
+      <AboutUdaan />
+
+      {/* about jobs */}
+      <Aboutjobs />
 
     </div>
   )

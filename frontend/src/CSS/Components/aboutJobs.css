@@ -1,0 +1,83 @@
+.aboutJobsBody {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+.aboutJobsSubBody {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutJobsLS {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutJobsLS h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #FDD832;
+    font-size: 44px;
+}
+.aboutJobsLS p {
+    margin-top: 0px;
+    width: 70%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.aboutJobsDive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    color: black;
+    text-decoration: none;
+    background-color: #FDD832;
+    padding: 15px;
+    border-radius: 50px;
+}
+.aboutJobsDive p{
+    /* margin-top: 20px; */
+    /* margin-top: 0px; */
+    font-size: 18px;
+    margin: 0px;
+}
+
+/* right side */
+.aboutJobsRS {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.aboutJobsBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px #FDD832;
+}
+.aboutJobsBox img {
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.aboutJobsBox h1 {
+    font-size: 22px;
+}
+.aboutJobsBox p {
+    font-size: 14px;
+    width: 85%;
+}

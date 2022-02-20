@@ -35,7 +35,7 @@ mongoose
 
 // making api routes
 
-const { Scholarships, Jobs } = require("./udaanSchema");
+const { Scholarships, Jobs, Heroes } = require("./udaanSchema");
 const e = require("express");
 
 app.get("/", (req, res) => {
@@ -77,6 +77,21 @@ app.post("/api/jobs", (req, res) => {
 
 app.get("/api/jobs", (req, res) => {
   Jobs.find()
+    .then(result => res.send(result))
+    .catch(err => console.log(err))
+})
+
+// heroes
+app.post("/api/heroes", (req, res) => {
+  const data = new Heroes(req.body);
+  res.json(data);
+  data.save()
+    .then(() => console.log("Hero details saved successfully"))
+    .catch(err => console.log("Error while saving job data..."));
+})
+
+app.get("/api/heroes", (req, res) => {
+  Heroes.find()
     .then(result => res.send(result))
     .catch(err => console.log(err))
 })

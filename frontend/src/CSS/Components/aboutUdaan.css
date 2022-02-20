@@ -1,0 +1,25 @@
+.aboutUdaanBody {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.aboutUdaanSubBody {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+}
+.aboutUdaanSubBody img {
+    width: 450px;
+}
+.aboutUdaanSubBody p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    margin-right: 50px;
+}
+.aboutUdaanSubBody span {
+    font-weight: bolder;
+}
