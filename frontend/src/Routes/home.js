@@ -1,8 +1,6 @@
 import React from "react";
 import "../CSS/Routes/home.css";
 import { motion } from "framer-motion"
-import untitled from "../assets/Untitled.svg"
-import landingVideo from "../assets/landingVideo.mp4";
 import landingGif from "../assets/landingVideo.gif";
 
 // component imports
@@ -15,7 +13,7 @@ import Footer from "../Components/footer";
 function Home() {
 
   return (
-    <div className="homeBody">
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} className="homeBody">
 
       {/* sub body */}
       <div className="homeSubBody">
@@ -39,7 +37,7 @@ function Home() {
         >
           {/* insert video here */}
           {/* <video src={landingVideo} autoPlay loop muted className="landingVideo" /> */}
-          <img src={landingGif} className="landingVideo" />
+          <img src={landingGif} className="landingVideo" alt="kids gif"/>
         </motion.div>
       </div>
       {/* sub body ends */}
@@ -59,7 +57,7 @@ function Home() {
       {/* footer */}
       <Footer />
 
-    </div>
+    </motion.div>
   )
 }
 

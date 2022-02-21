@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../CSS/Components/aboutJobs.css"
-import {MdArrowRight, MdArrowRightAlt} from "react-icons/md";
+import {MdArrowRight} from "react-icons/md";
 import aboutJobsBox1 from "../assets/aboutJobsBox1.png"
 import aboutJobsBox2 from "../assets/aboutJobsBox2.png"
 import {Link} from "react-router-dom"
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 function AboutJobs() {
 
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+
+    if (!inView) {
+      animation.start({
+        opacity: 0,
+      });
+    }
+  });
+
   return (
-    <div className="aboutJobsBody">
-      <div className="aboutJobsSubBody">
+    <div className="aboutJobsBody" ref={ref}>
+      <motion.div animate={animation} className="aboutJobsSubBody">
         {/* left side */}
         <div className="aboutJobsLS">
           <h1>GET. SET. FLY!</h1>
@@ -29,20 +52,20 @@ function AboutJobs() {
 
           {/* LEFT BOX */}
           <div className="aboutJobsBox">
-            <img src={aboutJobsBox1} />
+            <img src={aboutJobsBox1} alt="sports"/>
             <h1>SPORTS</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
           </div>
 
           {/* RIGHT BOX */}
           <div className="aboutJobsBox">
-            <img src={aboutJobsBox2} />
+            <img src={aboutJobsBox2} alt="sports"/>
             <h1>JOBS</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
           </div>
 
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

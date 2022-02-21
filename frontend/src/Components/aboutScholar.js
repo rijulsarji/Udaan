@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../CSS/Components/aboutScholar.css"
-import { MdArrowLeft, MdOutlineArrowLeft } from "react-icons/md";
+import { MdArrowLeft } from "react-icons/md";
 import aboutScholarCap from "../assets/aboutScholarCap.png"
 import {Link} from "react-router-dom";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 function AboutScholar() {
 
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+
+    if (!inView) {
+      animation.start({
+        opacity: 0,
+      });
+    }
+  });
+
   return (
-    <div className="aboutScholarBody">
-      <div className="aboutScholarSubBody">
+    <div className="aboutScholarBody" ref={ref}>
+      <motion.div animate={animation} className="aboutScholarSubBody">
         {/* left side */}
         <div className="aboutScholarLS">
           {/* left box */}
           <div className="aboutScholarBox">
-            <img src={aboutScholarCap} />
+            <img src={aboutScholarCap} alt="scholar cap"/>
             <h1>JOBS</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -23,7 +46,7 @@ function AboutScholar() {
 
           {/* right box */}
           <div className="aboutScholarBox">
-            <img src={aboutScholarCap} />
+            <img src={aboutScholarCap} alt="scholar cap"/>
             <h1>JOBS</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -36,18 +59,18 @@ function AboutScholar() {
         <div className="aboutScholarRS">
           <h1>FUEL YOUR WINGS</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries.
+            Zeal to achieve your dreams, automatically opens the path to
+            opportunities. Let no materialistic hurdle like money stop you from
+            scaling your success. Filter out the best suitable scholarship
+            options to fuel up your wings and prepare you for your highest
+            flight.
           </p>
           <Link to="/" className="aboutScholarGrab">
-            <MdArrowLeft size={24}/>
+            <MdArrowLeft size={24} />
             <p>GRAB ONE</p>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

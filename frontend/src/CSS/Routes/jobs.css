@@ -2,7 +2,7 @@
     background-image: url("../../assets/bgImage.png");
     background-repeat: repeat-y;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 }
 
 .jobSearch {
@@ -30,6 +30,56 @@
 }
 .jobSearchIcon {
     font-size: 24px;
+}
+
+.jobCardContainer {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    align-items: stretch;
+    justify-content: center;
+    column-gap: 6%;
+    row-gap: 75px;
+    margin-top: 75px;
+    padding-bottom: 50px;
+}
+.jobCardBody {
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px #FDD832;
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+}
+.jobCardBody h1 {
+    font-size: 28px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.jobCardBody h3 {
+    font-size: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.jobCardBody p {
+    font-size: 18px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.jobRedirects {
+    color: black;
+}
+.jobCardSubtitle {
+    font-weight: bolder;
+    color: #FDD832;
+}
+
+.jobLoading {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 100px;
 }
 
 @media screen and (max-width: 480px) {

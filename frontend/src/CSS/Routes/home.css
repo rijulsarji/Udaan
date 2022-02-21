@@ -41,10 +41,8 @@
 /* mobile view */
 
 @media screen and (max-width: 480px) {
-    .homeBody {
-        margin-top: 100px;
-    }
     .homeSubBody {
+        margin-top: 100px;
         flex-direction: column-reverse;
     }
 
