@@ -23,3 +23,23 @@
 .aboutUdaanSubBody span {
     font-weight: bolder;
 }
+
+@media screen and (max-width: 480px) {
+    .aboutUdaanSubBody {
+        padding-top: 40px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .aboutUdaanSubBody img {
+        width: 350px;
+    }
+    .aboutUdaanBody p {
+        font-size: 18px;
+        margin-right: 0px;
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,53 @@
+.scholarshipBody {
+    background-image: url("../../assets/bgImage.png");
+    background-repeat: repeat-y;
+    width: 100vw;
+    height: 100vh;
+}
+.scholarshipSearch {
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.scholarshipSearchOutline {
+    width: 30%;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #FDD832;
+}
+.scholarshipSearch input {
+    border-width: 0px;
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 10px;
+}
+.scholarshipSearch input:focus {
+    outline: none;
+}
+.scholarshipSearchIcon {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+    .scholarshipSearch {
+        gap: 0px;
+        padding-top: 100px;
+    }
+    .scholarshipSearchOutline {
+        width: 80%;
+        box-shadow: 3px 3px 3px #FDD832;
+    }
+    .scholarshipSearch {
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    .scholarshipSearch input {
+        font-size: 20px;
+    }
+    .scholarshipSearchIcon {
+        font-size: 20px;
+    }
+}

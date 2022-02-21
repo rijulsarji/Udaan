@@ -5,7 +5,7 @@ import aboutUdaanImg from "../assets/aboutUdaanImg.png";
 function AboutUdaan() {
   
   return (
-    <div classname="aboutUdaanBody">
+    <div className="aboutUdaanBody">
       <div className="aboutUdaanSubBody">
         <img src={aboutUdaanImg} className="aboutUdaanImg" />
         <p className="aboutUdaanPara">

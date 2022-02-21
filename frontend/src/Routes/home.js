@@ -7,7 +7,10 @@ import landingGif from "../assets/landingVideo.gif";
 
 // component imports
 import AboutUdaan from "../Components/aboutUdaan";
-import Aboutjobs from "../Components/aboutJobs";
+import AboutJobs from "../Components/aboutJobs";
+import AboutScholar from "../Components/aboutScholar";
+import Heroes from "../Components/heroes";
+import Footer from "../Components/footer";
 
 function Home() {
 
@@ -45,7 +48,16 @@ function Home() {
       <AboutUdaan />
 
       {/* about jobs */}
-      <Aboutjobs />
+      <AboutJobs />
+
+      {/* about scholarships */}
+      <AboutScholar />
+
+      {/* heroes */}
+      <Heroes />
+
+      {/* footer */}
+      <Footer />
 
     </div>
   )

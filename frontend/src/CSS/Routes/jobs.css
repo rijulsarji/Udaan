@@ -1,0 +1,54 @@
+.jobBody {
+    background-image: url("../../assets/bgImage.png");
+    background-repeat: repeat-y;
+    width: 100vw;
+    height: 100vh;
+}
+
+.jobSearch {
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.jobSearchOutline {
+    width: 30%;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #FDD832;
+}
+.jobSearch input {
+    border-width: 0px;
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 10px;
+}
+.jobSearch input:focus {
+    outline: none;
+}
+.jobSearchIcon {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+    .jobSearch {
+        gap: 0px;
+        padding-top: 100px;
+    }
+    .jobSearchOutline {
+        width: 80%;
+        box-shadow: 3px 3px 3px #FDD832;
+    }
+    .jobSearch {
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    .jobSearch input {
+        font-size: 20px;
+    }
+    .jobSearchIcon {
+        font-size: 20px;
+    }
+}

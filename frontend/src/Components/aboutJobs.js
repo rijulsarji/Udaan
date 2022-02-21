@@ -1,11 +1,11 @@
 import React from "react";
 import "../CSS/Components/aboutJobs.css"
-import {MdArrowRightAlt} from "react-icons/md";
+import {MdArrowRight, MdArrowRightAlt} from "react-icons/md";
 import aboutJobsBox1 from "../assets/aboutJobsBox1.png"
 import aboutJobsBox2 from "../assets/aboutJobsBox2.png"
 import {Link} from "react-router-dom"
 
-function Aboutjobs() {
+function AboutJobs() {
 
   return (
     <div className="aboutJobsBody">
@@ -20,7 +20,7 @@ function Aboutjobs() {
           </p>
           <Link to="/" className="aboutJobsDive">
               <p>DIVE IN</p>
-              <MdArrowRightAlt size={32} />
+              <MdArrowRight size={24} />
           </Link>
         </div>
 
@@ -47,4 +47,4 @@ function Aboutjobs() {
   );
 }
 
-export default Aboutjobs;
+export default AboutJobs;

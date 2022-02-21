@@ -4,6 +4,8 @@ import "./App.css"
 
 // file imports
 import Home from "./Routes/home";
+import Jobs from "./Routes/jobs";
+import Scholarships from "./Routes/scholarships";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/scholarships" element={<Scholarships />} />
         </Routes>
       </Router>
     </div>

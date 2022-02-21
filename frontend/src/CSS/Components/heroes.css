@@ -1,0 +1,31 @@
+.heroesBody {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.heroesSubBody {
+    padding-top: 100px;
+}
+.heroesSubBody h1 {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: black;
+    font-size: 44px;
+}
+.heroesSubBody span {
+    color: #FDD832;
+}
+
+@media screen and (max-width: 480px) {
+    .heroesBody {
+        height: 50vh;
+    }
+    .heroesSubBody {
+        padding-top: 10px;
+    }
+    .heroesSubBody h1 {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+}

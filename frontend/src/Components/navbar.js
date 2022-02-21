@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../CSS/Components/navbar.css";
 
 // image import
@@ -17,12 +17,12 @@ function Navbar() {
       {/* right side of navbar */}
       <div className="rightNavbarSide">
         <div className="navbarLinkContainer">
-          <Link to="/" className="navbarLinks">Home</Link>
-          <Link to="/" className="navbarLinks">About</Link>
-          <Link to="/" className="navbarLinks">Jobs</Link>
-          <Link to="/" className="navbarLinks">Scholarship</Link>
-          <Link to="/" className="navbarLinks">Heroes</Link>
-          <Link to="/" className="navbarLinks">NGOs</Link>
+          <NavLink activeClassName="active" to="/" className="navbarLinks">Home</NavLink>
+          <NavLink activeClassName="active" to="/" className="navbarLinks">About</NavLink>
+          <NavLink activeClassName="active" to="/jobs" className="navbarLinks">Jobs</NavLink>
+          <NavLink activeClassName="active" to="/scholarships" className="navbarLinks">Scholarship</NavLink>
+          <NavLink activeClassName="active" to="/" className="navbarLinks">Heroes</NavLink>
+          <NavLink activeClassName="active" to="/" className="navbarLinks">NGOs</NavLink>
         </div>
       </div>
     </div>

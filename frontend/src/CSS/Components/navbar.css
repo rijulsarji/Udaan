@@ -37,6 +37,9 @@
 .navbarLinks:hover {
     color: #FDD832;
 }
+.active {
+    color: #FDD832;
+}
 
 @media screen and (max-width: 480px) {
     .navbarBody {
