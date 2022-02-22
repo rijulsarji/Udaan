@@ -46,6 +46,13 @@
     box-shadow: 6px 6px 6px #FDD832;
     font-family: 'Rubik', sans-serif;
     background-color: white;
+    position: relative;
+}
+.scholarshipCardBody img {
+    position: absolute;
+    width: 75px;
+    top: -30px;
+    left: -30px;
 }
 .scholarshipCardBody h1 {
     font-size: 28px;

@@ -48,6 +48,17 @@
         height: min-content;
         margin: 0px;
     }
+
+    .footerBox h1 {
+        font-size: 32px;
+    }
+    .footerLinks a {
+        font-size: 14px;
+    }
+    .footerBox p {
+        font-size: 16px;
+    }
+
     .footerImg {
         height: 120px;
     }

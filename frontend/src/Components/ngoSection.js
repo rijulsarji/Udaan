@@ -55,7 +55,12 @@ function NGOsection() {
           >
             {apiData.map(data => (
               <div>
-                <SwiperSlide className="projectCardHolder"><div><p>{data.title}</p></div></SwiperSlide>
+                <SwiperSlide className="projectCardHolder">
+                  <div>
+                    <h1>{data.title}</h1>
+                    <p>{data.description}</p>
+                  </div>
+                </SwiperSlide>
               </div>
             ))}
           </Swiper>

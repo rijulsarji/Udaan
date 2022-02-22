@@ -34,7 +34,7 @@
 
 .jobCardContainer {
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 40% 40%;
     align-items: stretch;
     justify-content: center;
     column-gap: 6%;
@@ -47,7 +47,9 @@
     box-shadow: 6px 6px 6px #FDD832;
     font-family: 'Rubik', sans-serif;
     background-color: white;
+    position: relative;
 }
+
 .jobCardBody h1 {
     font-size: 28px;
     width: 90%;

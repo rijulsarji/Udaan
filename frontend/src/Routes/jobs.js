@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/Routes/jobs.css";
-import {FaSearch} from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Jobs() {

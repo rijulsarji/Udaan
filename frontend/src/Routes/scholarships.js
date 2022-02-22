@@ -3,6 +3,8 @@ import "../CSS/Routes/scholarships.css";
 import { FaSearch } from "react-icons/fa";
 import {motion} from "framer-motion";
 
+import aboutScholarCap from "../assets/aboutScholarCap.png";
+
 function Scholarships() {
 
   const [apiData, setApiData] = useState([]);
@@ -42,6 +44,7 @@ function Scholarships() {
       <div className="scholarshipCardContainer">
         {!load ? apiData.filter(data => {return data.title.toLowerCase().includes(search)}).map((data) => (
           <motion.div initial={{opacity: 0}} animate={{opacity: 1}} className="scholarshipCardBody">
+            <img src={aboutScholarCap} alt="cap" />
             <h1>{data.title}</h1>
             <h3>{data.eligibility}</h3>
             <p><span className="scholarshipCardSubtitle">Description: </span>{data.description}</p>
