@@ -29,8 +29,14 @@ const heroSchema = new Schema({
   image: { type: String },
 });
 
+const ngoSchema = new Schema ({
+  title: { type: String },
+  description: { type: String },
+})
+
 const Scholarships = mongoose.model("scholarships", scholarshipSchema);
 const Jobs = mongoose.model("jobs", jobSchema);
 const Heroes = mongoose.model("heroes", heroSchema);
+const NGOs = mongoose.model("ngos", ngoSchema);
 
-module.exports = { Scholarships, Jobs, Heroes };
+module.exports = { Scholarships, Jobs, Heroes, NGOs };

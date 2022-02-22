@@ -28,16 +28,20 @@
     justify-content: center;
     align-items: center;
     box-shadow: 6px 6px 6px #fdd832;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     border-radius: 20px 20px 100% 100%;
     font-family: 'Rubik', sans-serif;
     background-color: white;
 }
-.aboutScholarBox img {
+.aboutScholarCap {
     width: 100px;
     position: absolute;
     top: -50px;
     left: -50px;
+}
+.aboutScholarImg {
+    height: 160px;
+    margin-top: 30px;
 }
 .aboutScholarBox h1 {
     font-size: 22px;

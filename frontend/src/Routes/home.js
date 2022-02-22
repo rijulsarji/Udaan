@@ -8,6 +8,7 @@ import AboutUdaan from "../Components/aboutUdaan";
 import AboutJobs from "../Components/aboutJobs";
 import AboutScholar from "../Components/aboutScholar";
 import Heroes from "../Components/heroes";
+import NGOsection from "../Components/ngoSection";
 import Footer from "../Components/footer";
 
 function Home() {
@@ -53,6 +54,9 @@ function Home() {
 
       {/* heroes */}
       <Heroes />
+
+      {/* NGO section */}
+      <NGOsection />
 
       {/* footer */}
       <Footer />

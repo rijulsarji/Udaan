@@ -4,6 +4,9 @@ import { MdArrowLeft } from "react-icons/md";
 import aboutScholarCap from "../assets/aboutScholarCap.png"
 import {Link} from "react-router-dom";
 
+import homeScholar1 from "../assets/homeScholar1.png";
+import homeScholar2 from "../assets/homeScholar2.png";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -36,22 +39,14 @@ function AboutScholar() {
         <div className="aboutScholarLS">
           {/* left box */}
           <div className="aboutScholarBox">
-            <img src={aboutScholarCap} alt="scholar cap"/>
-            <h1>JOBS</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-            </p>
+            <img src={aboutScholarCap} className="aboutScholarCap" alt="scholar cap"/>
+            <img src={homeScholar1} className="aboutScholarImg"/>
           </div>
 
           {/* right box */}
           <div className="aboutScholarBox">
-            <img src={aboutScholarCap} alt="scholar cap"/>
-            <h1>JOBS</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-            </p>
+            <img src={aboutScholarCap} className="aboutScholarCap" alt="scholar cap"/>
+            <img src={homeScholar2} className="aboutScholarImg"/>
           </div>
         </div>
 

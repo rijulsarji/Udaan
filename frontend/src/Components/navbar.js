@@ -18,11 +18,11 @@ function Navbar() {
       <div className="rightNavbarSide">
         <div className="navbarLinkContainer">
           <NavLink activeClassName="active" to="/" className="navbarLinks">Home</NavLink>
-          <NavLink activeClassName="active" to="/" className="navbarLinks">About</NavLink>
+          {/* <NavLink activeClassName="active" to="/" className="navbarLinks">About</NavLink> */}
           <NavLink activeClassName="active" to="/jobs" className="navbarLinks">Jobs</NavLink>
           <NavLink activeClassName="active" to="/scholarships" className="navbarLinks">Scholarship</NavLink>
-          <NavLink activeClassName="active" to="/" className="navbarLinks">Heroes</NavLink>
-          <NavLink activeClassName="active" to="/" className="navbarLinks">NGOs</NavLink>
+          <NavLink activeClassName="active" to="/heroes" className="navbarLinks">Heroes</NavLink>
+          {/* <NavLink activeClassName="active" to="/" className="navbarLinks">NGOs</NavLink> */}
         </div>
       </div>
     </div>

@@ -6,6 +6,31 @@
 .footerSubBody {
     padding-top: 100px;
 }
+
+.footerBox h1{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #FDD832;
+    font-size: 44px;
+    text-align: center;
+    margin: 0px;
+}
+.footerLinks {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footerLinks a {
+    color: black;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footerBox p {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+}
+
 .footerImg {
     width: 100vw;
     height: 250px;
