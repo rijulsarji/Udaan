@@ -6,7 +6,7 @@ import "./App.css"
 import Home from "./Routes/home";
 import Jobs from "./Routes/jobs";
 import Scholarships from "./Routes/scholarships";
-import HeroPage from "./Routes/heroPage";
+import Heroes from "./Routes/heroes";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/scholarships" element={<Scholarships />} />
-          <Route path="/heroes" element={<HeroPage />} />
+          <Route path="/heroes" element={<Heroes />} />
         </Routes>
       </Router>
     </div>

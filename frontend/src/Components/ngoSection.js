@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../CSS/Components/ngoSection.css"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectCoverflow, Mousewheel, Pagination } from "swiper";

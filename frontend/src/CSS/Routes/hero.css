@@ -1,0 +1,39 @@
+.heroBody{
+    background-image: url("../../assets/bgImage.png");
+    background-repeat: repeat-y;
+    width: 100vw;
+    height: (100vh-72px);
+    font-family: 'Rubik', sans-serif;
+}
+
+.heroCardHeading{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 44px;
+    padding-top: 100px;
+    color: #FDD832;
+    line-height: .5 ;
+}
+
+.heroCardDescription{
+    text-align: center;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    letter-spacing: 1px;
+}
+
+.heroStoryHeading{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 36px;
+    padding: 0;
+}
+
+.heroStoryHeading .highlight{
+    color: #FDD832;
+}
