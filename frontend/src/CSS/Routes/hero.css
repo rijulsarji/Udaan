@@ -39,11 +39,15 @@
 }
 
 @media (max-width: 480px){
+    .heroCardHeading{
+        padding-top: 44px;
+        font-size: 42px;
+    }
     .heroCardDescription{
         padding-left: 25px;
         padding-right: 25px;
-        font-size: 25px;
-        line-height: 1.3;
+        font-size: 24px;
+        line-height: 1.4;
     }
     .heroStoryHeading{
         line-height: 1.5;
