@@ -34,7 +34,7 @@ export default function HeroStory() {
       >
         <SwiperSlide style={{backgroundColor: "#8282FF"}} className="mySwiper">
             <div className="leftdiv">
-                <h2>IRA SENGAL</h2>
+                <h2>IRA SINGHAL</h2>
                 <p>
                 Ira Singhal was born on 31st August 1983 in Meerut. She has scoliosis Disease, which is why she can’t walk properly and has short height. She attempted in UPSE exams and scored 1,082 marks out of 2025 and secured 53.43% in 2014-2015. Despite achieving exams in the first attempt in 2010, she was not allowed to take a position. Era filed a case in the Central Administrative Tribunal (CAT) and won after 4 years. In 2015 IAS.
                 Ira showed her potential to People who demoralized her and rejected her from her deserved a post. She is a face for disabled persons, and also for all human beings. That nothing is impossible for the desired one.
