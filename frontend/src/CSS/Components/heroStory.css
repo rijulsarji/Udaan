@@ -61,3 +61,24 @@ h2{
     width: 50%;
 }
 
+@media(max-width: 480px){
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    border-radius: 10px;
+  }  
+  .leftdiv{
+    width: 100%;
+  }
+  .leftdiv h2{
+    font-size: 22px;
+  }
+  .rightdiv{
+    width: 100%;
+  }
+}

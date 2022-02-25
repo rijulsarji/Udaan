@@ -13,14 +13,14 @@
     font-size: 44px;
     padding-top: 100px;
     color: #FDD832;
-    line-height: .5 ;
+    line-height: 1.5;
 }
 
 .heroCardDescription{
     text-align: center;
     padding: 0;
     line-height: 1.2;
-    font-size: 30px;
+    font-size: 28px;
     padding-left: 200px;
     padding-right: 200px;
     letter-spacing: 1px;
@@ -30,10 +30,22 @@
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
     letter-spacing: 2px;
-    font-size: 36px;
+    font-size: 38px;
     padding: 0;
 }
 
 .heroStoryHeading .highlight{
     color: #FDD832;
+}
+
+@media (max-width: 480px){
+    .heroCardDescription{
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 25px;
+        line-height: 1.3;
+    }
+    .heroStoryHeading{
+        line-height: 1.5;
+    }
 }
