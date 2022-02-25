@@ -9,10 +9,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 200px;
+    gap: 100px;
 }
 .aboutUdaanSubBody img {
-    width: 450px;
+    width: 650px;
+    margin-left: 50px;
 }
 .aboutUdaanSubBody p{
     font-family: 'Rubik', sans-serif;
@@ -22,6 +23,9 @@
     font-weight: 500;
 }
 .aboutUdaanSubBody span {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 32px;
+    color: #FDD832;
     font-weight: bolder;
 }
 
@@ -33,6 +37,10 @@
     }
     .aboutUdaanSubBody img {
         width: 350px;
+        margin-left: 0px;
+    }
+    .aboutUdaanSubBody span {
+        font-size: 28px;
     }
     .aboutUdaanBody p {
         font-size: 18px;

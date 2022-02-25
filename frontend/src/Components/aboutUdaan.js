@@ -30,15 +30,16 @@ function AboutUdaan() {
   return (
     <div className="aboutUdaanBody" ref={ref}>
       <motion.div animate={animation} className="aboutUdaanSubBody">
-        <img src={aboutUdaanImg} className="aboutUdaanImg" alt="children"/>
+        <img src={aboutUdaanImg} className="aboutUdaanImg" alt="children" />
         <p className="aboutUdaanPara">
-          <span>UDAAN</span>, ONE-STOP PLATFORM THAT NOT ONLY HELPS YOU FIND YOUR UNEXPLORED
-          WINGS BUT ALSO LENDS HAND IN SETTING YOUR FLIGHT IN THE BEST
-          DIRECTION. <span>UDAAN</span> CONNECTS THE TECHNOLOGY TO THE NEEDS OF ALL OUR
-          SPECIALLY-ABLED FRIENDS AND WAVES OFF TO THE MAZE-LIKE WEB PAGES. JUST
-          THE ZEAL TO CONQUER YOUR DREAMS IS THE INPUT REQUIRED, REST <span>UDAAN</span> WILL
-          TAKE CARE OF. BRINGING A SMILE ON THE FACE AND PRIDE IN THE EYES OF
-          EVERY SPECIALLY-ABLED INDIVIDUAL IS THE MISSION AND VISION OF <span>UDAAN</span>.
+          <span>UDAAN</span>, one-stop platform that not only helps you find
+          your unexplored wings but also lends hand in setting your flight in
+          the best direction. Udaan connects the technology to the needs of all
+          our specially-abled friends and waves off to the maze-like web pages.
+          Just the zeal to conquer your dreams is the input required, rest Udaan
+          will take care of. Bringing a smile on the face and pride in the eyes
+          of every specially-abled individual is the mission and vision of
+          Udaan.
         </p>
       </motion.div>
     </div>
