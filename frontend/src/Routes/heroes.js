@@ -9,6 +9,7 @@ import HeroStory from "../Components/heroStory";
 import HeroCard from "../Components/heroCard";
 
 function Heroes() {
+    
     return(
         <>  
         <div className="heroBody">

@@ -1,23 +1,61 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/Routes/home.css";
 import { motion } from "framer-motion"
 import landingGif from "../assets/landingVideo.gif";
+
+import { useInView } from "react-intersection-observer";
+
+import ReactHowler from "react-howler";
+
+import landingPage from "../assets/landingPage.aac";
 
 // component imports
 import AboutUdaan from "../Components/aboutUdaan";
 import AboutJobs from "../Components/aboutJobs";
 import AboutScholar from "../Components/aboutScholar";
-import Heroes from "../Components/heroes";
 import NGOsection from "../Components/ngoSection";
 import Footer from "../Components/footer";
 
 function Home() {
 
+  const [sessVar, setSessVar] = useState(false);
+  const [blind, setBlind] = useState(false);
+  setInterval(() => {
+    setSessVar(window.sessionStorage.getItem("blind"));
+  }, 1000);
+
+  useEffect(() => {
+    if (sessVar === "true") setBlind(true);
+    else setBlind(false);
+  }, [sessVar]);
+
+  const {ref, inView } = useInView({initialInView: true});
+
+  const [play, setPlay] = useState(false)
+
+  useEffect(() => {
+    if(inView && blind)
+      setPlay(true)
+    else
+      setPlay(false)
+  }, [inView])
+
+
+  // const sound = new Howl ({
+  //   src: landingPage
+  // })
+
+  // if(inView)
+  //   sound.play();
+  // if(!inView)
+  //   sound.stop()
+
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} className="homeBody">
 
+      <ReactHowler playing={play} src={[landingPage]} />
       {/* sub body */}
-      <div className="homeSubBody">
+      <div className="homeSubBody" ref={ref}>
         <motion.div 
           initial={{opacity: 0}} 
           animate={{opacity: 1}}
@@ -51,9 +89,6 @@ function Home() {
 
       {/* about scholarships */}
       <AboutScholar />
-
-      {/* heroes */}
-      <Heroes />
 
       {/* NGO section */}
       <NGOsection />

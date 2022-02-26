@@ -51,7 +51,7 @@ function Scholarships() {
             type="text"
             placeholder="Enter your search"
             value={search}
-            onChange={update}
+            onChange={update} 
           />
         </div>
       </div>

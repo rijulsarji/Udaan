@@ -40,7 +40,7 @@ function Jobs() {
         </p>
       </div>
 
-      {/* search box */}
+      {/* search box */} 
       <div className="jobSearch">
         <div className="jobSearchOutline">
           <FaSearch className="jobSearchIcon" />

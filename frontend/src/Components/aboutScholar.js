@@ -1,19 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/Components/aboutScholar.css"
 import { MdArrowLeft } from "react-icons/md";
-import aboutScholarCap from "../assets/aboutScholarCap.png"
+import aboutScholarCap from "../assets/aboutScholarCap.png";
 import {Link} from "react-router-dom";
+
+import aboutScholars from "../assets/aboutScholars.aac";
 
 import homeScholar1 from "../assets/homeScholar1.png";
 import homeScholar2 from "../assets/homeScholar2.png";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ReactHowler from "react-howler";
 
 function AboutScholar() {
 
+  const [sessVar, setSessVar] = useState(false);
+  const [blind, setBlind] = useState(false);
+  setInterval(() => {
+    setSessVar(window.sessionStorage.getItem("blind"));
+  }, 1000);
+
+  useEffect(() => {
+    if (sessVar === "true") setBlind(true);
+    else setBlind(false);
+  }, [sessVar]);
+
   const { ref, inView } = useInView();
   const animation = useAnimation();
+
+  const { ref: audioRef, inView: audioInView } = useInView();
+  const [play, setPlay] = useState(false);
+
+  useEffect(() => {
+    if (audioInView && blind) setPlay(true);
+    else setPlay(false);
+  }, [audioInView]);
 
   useEffect(() => {
     if (inView) {
@@ -30,10 +52,11 @@ function AboutScholar() {
         opacity: 0,
       });
     }
-  });
+  }, [inView]);
 
   return (
     <div className="aboutScholarBody" ref={ref}>
+      <ReactHowler playing={play} src={[aboutScholars]} />
       <motion.div animate={animation} className="aboutScholarSubBody">
         {/* left side */}
         <div className="aboutScholarLS">
@@ -62,7 +85,7 @@ function AboutScholar() {
           </p>
           <Link to="/" className="aboutScholarGrab">
             <MdArrowLeft size={24} />
-            <p>GRAB ONE</p>
+            <p ref={audioRef}>GRAB ONE</p>
           </Link>
         </div>
       </motion.div>

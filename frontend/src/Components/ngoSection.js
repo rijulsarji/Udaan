@@ -19,7 +19,7 @@ function NGOsection() {
         setApiData(data)
         setLoad(false)
       })
-  })
+  }, [])
 
   // install Swiper modules
   SwiperCore.use([Mousewheel, EffectCoverflow, Pagination]);
@@ -27,6 +27,8 @@ function NGOsection() {
   return (
     <div>
       <div className="ngoSubBody">
+        <h2>Our Superheroes!</h2>
+        <h6>The real angels of God, the life savers. Here is a list of our national superheroes. We love them 3000!</h6>
         {!load ? (
           <Swiper
             effect={"coverflow"}
@@ -37,7 +39,7 @@ function NGOsection() {
               stretch: 0,
               depth: 100,
               modifier: 1,
-              slideShadows: false,
+              slideShadows: true,
             }}
             pagination={{ clickable: true, type: "bullets" }}
             breakpoints={{
@@ -54,9 +56,9 @@ function NGOsection() {
             }}
             className="projectContainer"
           >
-            {apiData.map(data => (
+            {apiData.map((data, index) => (
               <div>
-                <SwiperSlide className="projectCardHolder">
+                <SwiperSlide className="projectCardHolder" key={data._id}>
                   <div>
                     <h1>{data.title}</h1>
                     <p>{data.description}</p>
@@ -65,9 +67,9 @@ function NGOsection() {
               </div>
             ))}
           </Swiper>
-
-          ) : <p>Loading...</p>
-        }
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );

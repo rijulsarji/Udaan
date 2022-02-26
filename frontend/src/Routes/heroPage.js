@@ -16,7 +16,7 @@ function HeroPage() {
 
   return (
     <div>
-      {!load ? dataApi.map(data => (<img src={data.image} />))
+      { !load ? dataApi.map(data => (<img src={data.image} />))
       : <p>Loading...</p>
       }
     </div>
